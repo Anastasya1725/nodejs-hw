@@ -9,11 +9,16 @@ const noteSchema = new Schema(
     },
     content: {
       type: String,
-      required: true
+      required: false,
+      default: '',
+      trim: true
     },
     tag: {
-      type: String,
-      required: true
+     type: String,
+    required: false,
+    default: 'Todo',
+    trim: true,
+    enum: ['Todo', 'In Progress', 'Done', 'Archive']
     }
   },
   {

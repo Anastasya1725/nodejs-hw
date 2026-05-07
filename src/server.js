@@ -25,7 +25,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(logger);
 
-app.use('/notes', notesRoutes);
+app.use(notesRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
