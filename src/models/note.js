@@ -18,7 +18,7 @@ const noteSchema = new Schema(
     required: false,
     default: 'Todo',
     trim: true,
-    enum: ['Todo', 'In Progress', 'Done', 'Archive']
+    enum: ['Work', 'Personal', 'Meeting', 'Shopping', 'Ideas', 'Travel', 'Finance', 'Health', 'Important', 'Todo']
     }
   },
   {
