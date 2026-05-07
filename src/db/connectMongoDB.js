@@ -10,5 +10,5 @@ export async function connectMongoDB() {
     process.exit(1);
   }
 }
-}
+
 
