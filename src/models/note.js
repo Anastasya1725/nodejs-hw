@@ -14,16 +14,23 @@ const noteSchema = new Schema(
       trim: true
     },
     tag: {
-     type: String,
-    required: false,
-    default: 'Todo',
-    trim: true,
-    enum: ['Work', 'Personal', 'Meeting', 'Shopping', 'Ideas', 'Travel', 'Finance', 'Health', 'Important', 'Todo']
+      type: String,
+      required: false,
+      default: 'Todo',
+      trim: true,
+      enum: ['Work', 'Personal', 'Meeting', 'Shopping', 'Ideas', 'Travel', 'Finance', 'Health', 'Important', 'Todo']
     }
   },
   {
     timestamps: true
   }
 );
+
+noteSchema.index({
+  title: 'text',
+  content: 'text',
+});
+
+
 
 export default model('Note', noteSchema);
