@@ -8,7 +8,7 @@ import {
   updateNote,
 } from '../controllers/notesController.js';
 import {
-  getAllNotesShema,
+  getAllNotesShcema,
   noteIdSchema,
   createNoteSchema,
   updateNoteSchema,
@@ -16,7 +16,7 @@ import {
 
 const router = Router();
 
-router.get("/notes", celebrate(getAllNotesShema), getAllNotes);
+router.get("/notes", celebrate(getAllNotesShcema), getAllNotes);
 router.get("/notes/:noteId", celebrate(noteIdSchema), getNoteById);
 router.post("/notes", celebrate(createNoteSchema), createNote);
 router.delete("/notes/:noteId", celebrate(noteIdSchema), deleteNote);
